@@ -25,6 +25,11 @@ BackEnd:
 
 ![query](preview_query.png)
 
-### Query
+### Mutation
 
 ![mutation](preview_mutation.png)
+
+### Form & List
+
+![form_list](preview_form.png)
+
