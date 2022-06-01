@@ -1,4 +1,4 @@
-const gql = require('graphql-tag')
+const gql = require("graphql-tag");
 
 module.exports = gql`
   enum Theme {
@@ -100,5 +100,4 @@ module.exports = gql`
     signup(input: SignupInput!): AuthUser!
     signin(input: SigninInput!): AuthUser!
   }
-
-`
+`;
