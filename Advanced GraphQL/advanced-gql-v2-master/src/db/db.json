@@ -26,8 +26,36 @@
       "avatar": "http",
       "createdAt": 1654048877788,
       "id": "zR5xX_kV1WGQzNbdUG6rO"
+    },
+    {
+      "email": "daniel@email.com",
+      "password": "123456",
+      "role": "ADMIN",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1654135654039,
+      "id": "nDChpzs7fJSoRSP9fLedA"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "message": "Hello there",
+      "author": "nDChpzs7fJSoRSP9fLedA",
+      "createdAt": 1654135760231,
+      "id": "jQdI_tIQVeGEnFXiT380M"
+    },
+    {
+      "message": "Hello there",
+      "author": "nDChpzs7fJSoRSP9fLedA",
+      "createdAt": 1654135839145,
+      "id": "ciC2ATMo210etXOsrHb32"
+    },
+    {
+      "message": "How are you?",
+      "author": "nDChpzs7fJSoRSP9fLedA",
+      "createdAt": 1654135872334,
+      "id": "cGTaZW9CX1gRw6MMgf16x"
+    }
+  ],
   "settings": []
 }

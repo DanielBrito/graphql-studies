@@ -31,6 +31,7 @@ const createModel = (db, table) => ({
   },
   createOne(fields) {
     const item = { ...fields, createdAt: Date.now(), id: nano() };
+
     db.get(table).push(item).write();
 
     return db.get(table).find({ id: item.id }).value();

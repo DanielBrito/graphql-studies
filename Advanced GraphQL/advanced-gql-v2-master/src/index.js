@@ -10,10 +10,33 @@ const db = require("./db");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context({ req }) {
+  context({ req, connection }) {
+    const context = { ...db };
+    if (connection) {
+      return { ...context, ...connection.context };
+    }
+
     const token = req.headers.authorization;
     const user = getUserFromToken(token);
-    return { ...db, user, createToken };
+
+    return { ...context, user, createToken };
+  },
+  subscriptions: {
+    onConnect(connectionParams) {
+      // if (connectionParams.auth) {
+      //   const user = getUserFromToken(connectionParams.auth);
+
+      //   if (!user) {
+      //     throw new Error("not authenticated");
+      //   }
+
+      //   return { user };
+      // }
+
+      // throw new Error("not authenticated");
+      const user = getUserFromToken(connectionParams.auth);
+      return { user };
+    },
   },
 });
 
