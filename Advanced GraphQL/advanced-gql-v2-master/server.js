@@ -1,4 +1,10 @@
-const { ApolloServer, PubSub } = require("apollo-server");
+const {
+  ApolloServer,
+  PubSub,
+  AuthenticationError,
+  UserInputError,
+  ApolloError,
+} = require("apollo-server");
 const gql = require("graphql-tag");
 
 const pubSub = new PubSub();
@@ -8,6 +14,7 @@ const typeDefs = gql`
   type User {
     id: ID!
     username: String!
+    error: String!
     createdAt: Int!
   }
 
@@ -82,11 +89,20 @@ const resolvers = {
       };
     },
   },
+  User: {
+    error() {
+      throw new AuthenticationError("Not auth");
+    },
+  },
 };
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  formatError(error) {
+    console.log(error);
+    return error;
+  },
   context({ connection, req }) {
     if (connection) {
       return { ...connection.context };

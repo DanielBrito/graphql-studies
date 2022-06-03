@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { AuthenticationError } = require("apollo-server");
 
 const { models } = require("./db");
 
@@ -33,7 +34,7 @@ const getUserFromToken = (token) => {
  */
 const authenticated = (next) => (root, args, context, info) => {
   if (!context.user) {
-    throw new Error("must authenticate");
+    throw new AuthenticationError("must authenticate");
   }
 
   return next(root, args, context, info);
@@ -47,7 +48,7 @@ const authenticated = (next) => (root, args, context, info) => {
  */
 const authorized = (role, next) => (root, args, context, info) => {
   if (context.user.role !== role) {
-    throw new Error(`you must have ${role} role`);
+    throw new AuthenticationError(`you must have ${role} role`);
   }
 
   return next(root, args, context, info);
