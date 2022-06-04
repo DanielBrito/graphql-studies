@@ -6,6 +6,13 @@ These experiments cover different tools and concepts related to GraphQL from my 
 
 - Queries
 - Mutations
+- Authentication
+- Authorization
+- Subscriptions
+- Errors
+- Testing
+- Directives
+- Caching
 
 ## :toolbox: Tools
 

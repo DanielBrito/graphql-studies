@@ -1,5 +1,0 @@
-node_modules
-*.log
-*.error
-dist
-DS_Store
