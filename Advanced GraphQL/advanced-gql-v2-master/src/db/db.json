@@ -35,6 +35,33 @@
       "avatar": "http",
       "createdAt": 1654135654039,
       "id": "nDChpzs7fJSoRSP9fLedA"
+    },
+    {
+      "email": "brito@email.com",
+      "password": "qwioeuqiowueooq",
+      "role": "ADMIN",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1654295086112,
+      "id": "tlxTHloFLha0uyuAjGYFn"
+    },
+    {
+      "email": "teresa@email.com",
+      "password": "qwioeuqiowueooq",
+      "role": "ADMIN",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1654296356512,
+      "id": "HYeHrdMMWyHus4toiEFh5"
+    },
+    {
+      "email": "harold@email.com",
+      "password": "qwioeuqiowueooq",
+      "role": "MEMBER",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1654303593672,
+      "id": "kwrHGUXT4AVcj2N7eeDjt"
     }
   ],
   "posts": [
